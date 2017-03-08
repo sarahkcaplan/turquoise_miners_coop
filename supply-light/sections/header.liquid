@@ -42,8 +42,8 @@
                   {{ 'layout.customer.logged_in_as_html' | t: first_name: first_name }} &middot; {{ 'layout.customer.log_out' | t | customer_logout_link }}
                 {% else %}
                   {{ 'layout.customer.sign_in' | t | customer_login_link }}
-                  <span class="site-header--spacer">{{ 'layout.customer.or' | t }}</span>
-                  {{ 'layout.customer.create_account' | t | customer_register_link }}
+                  {% comment %}<span class="site-header--spacer">{{ 'layout.customer.or' | t }}</span>
+                  {{ 'layout.customer.create_account' | t | customer_register_link }}{% endcomment %}
                 {% endif %}
               </span>
             {% endif %}
