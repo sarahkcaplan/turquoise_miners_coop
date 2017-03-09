@@ -44,7 +44,7 @@
             {% else %}
               <span class="visually-hidden">{{ "products.general.regular_price" | t }}</span>
             {% endif %}
-            {% include 'price' with item.price %}
+{% comment %}            {% include 'price' with item.price %}{% endcomment %}
             {% if on_sale and section.settings.product_show_compare_at_price  %}
               <small>
                 <s>

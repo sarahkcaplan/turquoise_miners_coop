@@ -24,7 +24,7 @@
           {% if sold_out %}
             <div class="badge badge--sold-out"><span class="badge-label">{{ 'products.product.sold_out' | t }}</span></div>
           {% endif %}
-          <img src="{{ product.featured_image.src | img_url: image_size }}" 
+          <img src="{{ product.featured_image.src | img_url: image_size }}"
           srcset="{{ product.featured_image.src | img_url: image_size }} 1x, {{ product.featured_image.src | img_url: image_size, scale: 2 }} 2x"
           alt="{{ product.featured_image.alt | escape }}">
         </div>
@@ -43,7 +43,7 @@
             {% else %}
               <span class="visually-hidden">{{ "products.general.regular_price" | t }}</span>
             {% endif %}
-            {% include 'price' with product.price %}
+{% comment %}            {% include 'price' with product.price %}{% endcomment %}
             {% if on_sale and section.settings.product_show_compare_at_price %}
               <small>
                 <s>
