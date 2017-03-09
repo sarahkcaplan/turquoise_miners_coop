@@ -168,7 +168,7 @@
 
       {% unless shop.enabled_payment_types == empty %}
         <div class="grid-item large--three-fifths large--text-right">
-          {% assign payment_icons_available = 'amazon_payments,american_express,apple_pay,bitcoin,cirrus,dankort,diners_club,discover,dogecoin,dwolla,forbrugsforeningen,interac,jcb,litecoin,maestro,master,paypal,visa' | split: ',' %}
+          {% assign payment_icons_available = 'american_express,discover,master,paypal,visa' | split: ',' %}
           <ul class="inline-list payment-icons">
             {% for type in shop.enabled_payment_types %}
               {% if payment_icons_available contains type %}
