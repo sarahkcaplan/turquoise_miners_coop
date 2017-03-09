@@ -40,19 +40,19 @@
       <p class="product-meta" itemprop="brand">{{ product.vendor }}</p>
     {% endif %}
 
-    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+{% comment %}    <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">{% endcomment %}
 
       {% assign variant = product.selected_or_first_available_variant %}
 
-      <meta itemprop="priceCurrency" content="{{ shop.currency }}">
-      <meta itemprop="price" content="{{ variant.price | divided_by: 100.00 }}">
+{% comment %}      <meta itemprop="priceCurrency" content="{{ shop.currency }}">{% endcomment %}
+{% comment %}      <meta itemprop="price" content="{{ variant.price | divided_by: 100.00 }}">{% endcomment %}
 
       <ul class="inline-list product-meta">
-        <li>
+{% comment %}        <li>
           <span id="productPrice-{{ section.id }}" class="h1">
             {% include 'price' with variant.price %}
           </span>
-        </li>
+        </li>{% endcomment %}
         {% if product.compare_at_price_max > product.price and section.settings.product_show_saved_amount %}
         <li>
           <span id="comparePrice-{{ section.id }}" class="sale-tag large">
